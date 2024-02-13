@@ -1,0 +1,103 @@
+/* ------------------- */
+/* Reset */
+/* -------------------- */
+
+/* Box-Sizing */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset Margin and Padding */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+picture,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set up the body */
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* Make images easier to work with */
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Make form elements easier to work with */
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+/* remove animations for people who turned them off */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* Utility Classes */
+/* -------------------- */
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  padding-inline: 2em; /* padding to right & left*/
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+/* Challenge */
+
+.box {
+  background-color: lightblue;
+  padding: 3rem;
+}
